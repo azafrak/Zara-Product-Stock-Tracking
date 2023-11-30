@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from telegram import Bot
 
 # Telegram Bot Bilgileri
-TELEGRAM_TOKEN = '' 
+TELEGRAM_TOKEN = ''
 TELEGRAM_CHAT_ID = ''
 
 
@@ -49,18 +49,18 @@ async def main():
             wait = WebDriverWait(driver, 10)
 
             # Ürün sayfasındaki beden numarasını seçmeye çalış
-            beden_element = wait.until(EC.element_to_be_clickable((By.ID, 'product-size-selector-298629453-item-3')))
+            beden_element = wait.until(EC.element_to_be_clickable((By.ID, 'product-size-selector-298629453-item-1')))
             beden_element.click()
 
             # Stok durumunu kontrol et
             stok_durumu_element = wait.until(
-                EC.presence_of_element_located((By.ID, 'product-size-selector-298629453-item-3')))
+                EC.presence_of_element_located((By.ID, 'product-size-selector-298629453-item-1')))
             stok_durumu = stok_durumu_element.get_attribute('data-qa-action')
 
             # Beden numarasını içeren elementi bul
             beden_numarasi_element = wait.until(
                 EC.visibility_of_element_located(
-                    (By.CSS_SELECTOR, 'li#product-size-selector-298629453-item-3 .product-size-info__main-label')))
+                    (By.CSS_SELECTOR, 'li#product-size-selector-298629453-item-1 .product-size-info__main-label')))
             beden_numarasi = beden_numarasi_element.text
 
             # Sonuçları ekrana yazdır
@@ -70,15 +70,19 @@ async def main():
             bot = Bot(token=TELEGRAM_TOKEN)
 
             if stok_durumu == 'size-in-stock':
-                message = f'🚨Takip ettiğin ürün stoğa girdi🎉! Acele Et!🚨\n\nBeden: {beden_numarasi}\nStok Durumu: {stok_durumu}\nÜrün Linki: {url}'
-                print('Ürün stokta!')
+                print_message = 'Ürün stokta!'
+                message = f'🚨*Takip ettiğin ürün stoğa girdi. Acele Et!*🚨\n\nBeden: {beden_numarasi}\nStok Durumu: {print_message}\nÜrün Linki: {url}'
+                await bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message, parse_mode='Markdown')
             elif stok_durumu == 'size-low-on-stock':
-                message = f'🚨Takip ettiğin ürün az sayıda stokta😟! Acele Et!🚨\n\nBeden: {beden_numarasi}\nStok Durumu: {stok_durumu}\nÜrün Linki: {url}'
-                print('Ürün az sayıda stokta!')
+                print_message = 'Ürün az sayıda stokta!'
+                message = f'🚨*Takip ettiğin ürün az sayıda stokta. Acele Et!*🚨\n\nBeden: {beden_numarasi}\nStok Durumu: {print_message}\nÜrün Linki: {url}'
                 await bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message, parse_mode='Markdown')
             else:
-                message = f'Takip ettiğin ürün stokta değil. 😢\n\nBeden: {beden_numarasi}\nStok Durumu: {stok_durumu}\nÜrün Linki: {url}'
-                print('Ürün stokta değil!')
+                print_message = 'Ürün stokta değil!'
+                message = f'Takip ettiğin ürün stokta değil. 😢\n\nBeden: {beden_numarasi}\nStok Durumu: {print_message}\nÜrün Linki: {url}'
+                await bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message, parse_mode='Markdown')
+
+            print(print_message)
 
             # Belirli bir süre bekleyerek tekrar kontrol etme
             await asyncio.sleep(5)  # Örnek olarak 5 dakika bekletme (saniye cinsinden)
