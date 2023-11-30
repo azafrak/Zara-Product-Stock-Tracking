@@ -2,7 +2,7 @@
 
 url = yazan yere, ürünün linki eklenecek.
 
-TELEGRAM API = yazan yere telegram botunuzun API TOKEN 'ını yazılacak 
+TELEGRAM API = yazan yere telegram botunuzun API TOKEN 'ını yazılacak.
 CHAT ID = yazan yere telegramda ki kullanıcı CHAT ID'i yazılacak.
 
 Proje içerisinde beden numarası ve stok bilgisini kontrol eden elementler belirtilmiştir. 
