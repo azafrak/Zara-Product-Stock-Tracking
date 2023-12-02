@@ -5,7 +5,7 @@ url = yazan yere, ürünün linki eklenecek.
 TELEGRAM API = yazan yere telegram botunuzun API TOKEN 'ını yazılacak.  
 CHAT ID = yazan yere telegramda ki kanalınızın CHAT ID'si yazılacak.  
 
-driver_path = buraya https://googlechromelabs.github.io/chrome-for-testing/ buradan indirdiğiniz en son chromedriver sürücüsünün bilgisayardaki konumunu yazılacak.  
+driver_path = buraya https://googlechromelabs.github.io/chrome-for-testing/ adresinden, tarayıcınızın sürümüne uygun indirdiğiniz chromedriver sürücüsünün bilgisayardaki konumunu yazılacak.  
 chrome_binary_path = bu kısma bilgisayarınızda yüklü olan Chrome tarayıcısının exe adresinin yolu yazılacak.  
 
 Proje içerisinde beden numarası ve stok bilgisini kontrol eden elementler belirtilmiştir.  
