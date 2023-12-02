@@ -3,7 +3,10 @@
 url = yazan yere, ürünün linki eklenecek.
 
 TELEGRAM API = yazan yere telegram botunuzun API TOKEN 'ını yazılacak.
-CHAT ID = yazan yere telegramda ki kullanıcı CHAT ID'i yazılacak.
+CHAT ID = yazan yere telegramda ki kanalınızın CHAT ID'si yazılacak.
+
+driver_path = buraya https://googlechromelabs.github.io/chrome-for-testing/ buradan indirdiğiniz en son chromedriver sürücüsünün bilgisayardaki konumunu yazılacak.
+chrome_binary_path = bu kısma bilgisayarınızda yüklü olan Chrome tarayıcısının exe adresinin yolu yazılacak.
 
 Proje içerisinde beden numarası ve stok bilgisini kontrol eden elementler belirtilmiştir. 
 Ekran görüntülerinde web sitesi inspect edilerek hangi alanların alınacağı gösterildi.
@@ -29,8 +32,8 @@ This project tracks the stock status of the selected product on the Zara website
 
 The API TOKEN of your telegram bot will be written where TELEGRAM API = is written. The CHAT ID of the user in Telegram will be written where CHAT ID = is written.
 
-url = (the link of the product will be written in this field)
-TELEGRAM API ''= (the API TOKEN of your telegram bot will be written)
+url = (the link of the product will be written in this field).
+TELEGRAM API ''= (the API TOKEN of your telegram bot will be written).
 CHAT ID = '' (user CHAT ID in telegram will be written.)
 
 The elements that control the body number and stock information are specified in the project.
