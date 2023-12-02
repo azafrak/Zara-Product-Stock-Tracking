@@ -1,12 +1,12 @@
 # Zara Ürün Stok Takibi
 
-*url =* yazan yere, ürünün linki eklenecek.
+url = yazan yere, ürünün linki eklenecek.
 
-*TELEGRAM API =* yazan yere telegram botunuzun API TOKEN 'ını yazılacak.  
+TELEGRAM API = yazan yere telegram botunuzun API TOKEN 'ını yazılacak.  
 *CHAT ID = *yazan yere telegramda ki kanalınızın CHAT ID'si yazılacak.  
 
-*driver_path =* buraya https://googlechromelabs.github.io/chrome-for-testing/ buradan indirdiğiniz en son chromedriver sürücüsünün bilgisayardaki konumunu yazılacak.  
-*chrome_binary_path* = bu kısma bilgisayarınızda yüklü olan Chrome tarayıcısının exe adresinin yolu yazılacak.  
+driver_path = buraya https://googlechromelabs.github.io/chrome-for-testing/ buradan indirdiğiniz en son chromedriver sürücüsünün bilgisayardaki konumunu yazılacak.  
+chrome_binary_path = bu kısma bilgisayarınızda yüklü olan Chrome tarayıcısının exe adresinin yolu yazılacak.  
 
 Proje içerisinde beden numarası ve stok bilgisini kontrol eden elementler belirtilmiştir.  
 Ekran görüntülerinde web sitesi inspect edilerek hangi alanların alınacağı gösterildi.  
