@@ -1,0 +1,35 @@
+{
+  "driver_path": "/Volumes/YEDEK/Masaüstü/Projelerim/Python_Proje/Urun_Stok_Takip/Zara Stok Bilgilendirme/chromedriver-mac-x64/chromedriver",
+  "chrome_binary_path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+  "chrome_options": {
+    "--headless=new=": true,
+    "disable-dev-shm-usage": true,
+    "--disable-gpu": true,
+    "--window-size=1920,1080": true,
+    "no-sandbox": true
+  },
+  "webdriver_wait_timeout": 10,
+  "asyncio_sleep_duration": 5,
+  "telegram_token": "BOT TOKEN",
+  "telegram_chat_id": "CHANNEL CHAT ID",
+
+
+  "products": [
+    {
+      "url": "https://www.zara.com/tr/tr/yun-karisimli-ceket-p08491114.html?v1=322874816&v2=2290637",
+      "product_id": "322874816",
+      "item_id": "1"
+    },
+    {
+      "url": "https://www.zara.com/tr/tr/z1975-straight-high-waist-cropped-boncuklu-jean-p06147195.html",
+      "product_id": "298629453",
+      "item_id": "0"
+    },
+    {
+      "url": "https://www.zara.com/tr/tr/yunlu-oversize-kaban---limited-edition-p01255846.html?v1=293231572&v2=2290666",
+      "product_id": "293231572",
+      "item_id": "0"
+    }
+  ]
+}
