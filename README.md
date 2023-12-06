@@ -18,7 +18,7 @@ Ekran görüntülerinde web sitesi inspect edilerek hangi alanların alınacağ�
 
 Bu koşullar sağlandığında kendi ürününüzün stok durumunu da kontrol ettirebilirsiniz.  
 
-Beden bilgisini kontrol eden element. buradaki product-size-selector-XXXXX kısmındaki XXX olan satır ürünün product_id'sidir.  
+Beden bilgisini kontrol eden element product-size-selector-XXXXX buradaki XXX olan satır ürünün product_id'sidir.  
 yanındaki item-1 yazan da beden numarasını temsil eder. JSON dosyasındaki ilgili yerleri takip etmek istediğiniz ürünün bilgileri ile doldurun.
 ![alt text](https://img001.prntscr.com/file/img001/uGXfan5USe6tLtOQR6fUqw.png)  
 
