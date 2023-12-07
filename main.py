@@ -25,6 +25,7 @@ chrome_options = Options()
 for arg, value in config["chrome_options"].items():
     chrome_options.add_argument(f"--{arg}={value}")
     chrome_options.add_argument(f"user-agent={user_agent}")
+    chrome_options.add_argument('--headless=new')
 
 # Create Chrome service
 chrome_service = ChromeService(executable_path=driver_path)
@@ -71,12 +72,14 @@ async def check_product(driver, product):
                     print_message = 'Ürün stokta!'
                 elif stok_durumu == 'size-low-on-stock':
                     print_message = 'Ürün az sayıda stokta!'
+                elif stok_durumu == 'size-back-soon':
+                    print_message = 'Ürün yakında gelecek!'
                 elif stok_durumu == 'size-out-of-stock':
                     print_message = 'Ürün stokta değil!'
 
                 if print_message:
                     bot = Bot(token=TELEGRAM_TOKEN)
-                    message = f'🚨*Takip ettiğin {print_message}\n🚨Acele Et!*\n\nBeden: {beden_numarasi}\nStok Durumu: {print_message}\nÜrün Linki: {url}'
+                    message = f'🚨*Takip ettiğin {print_message}*\n\nBeden: {beden_numarasi}\nStok Durumu: {print_message}\nÜrün Linki: {url}'
                     await bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message, parse_mode='Markdown')
                     previous_stock_status[url]['previous'] = stok_durumu
 
