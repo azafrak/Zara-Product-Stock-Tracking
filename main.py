@@ -88,11 +88,12 @@ async def check_product(driver, product):
 
                 if print_message:
                     bot = Bot(token=TELEGRAM_TOKEN)
-                    message = f'🚨*Takip ettiğin {print_message}*\n\nBeden: {beden_numarasi}\nStok Durumu: {print_message}\nÜrün Linki: {url}'
+                    message = f'🚨*Takip ettiğin {print_message}*\n\nRenk: {color_id}\nBeden: {beden_numarasi}\nStok Durumu: {print_message}\nÜrün Linki: {url}'
                     await bot.send_message(chat_id=TELEGRAM_CHAT_ID, text=message, parse_mode='Markdown')
                     previous_stock_status[url]['previous'] = stok_durumu
 
                     # Sonuçları ekrana yazdır
+                    print(f'Ürün rengi: {color_id}')
                     print(f'Seçilen beden numarası: {beden_numarasi}\n{print_message}')
 
             # Belirli bir süre bekleyerek tekrar kontrol etme
