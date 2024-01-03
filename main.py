@@ -37,6 +37,7 @@ async def check_product(driver, product):
     url = product["url"]
     product_id = product["product_id"]
     item_id = product["item_id"]
+    color_id = product["color_id"]
 
     try:
         while True:
@@ -45,6 +46,14 @@ async def check_product(driver, product):
 
             # Bekleme süresi için bir WebDriverWait oluştur
             wait = WebDriverWait(driver, 10)
+
+            # Ürün rengini seç
+            if color_id:
+                color_button = wait.until(
+                    EC.element_to_be_clickable((By.XPATH,
+                                                f'//button[@data-qa-action="select-color"]//span[@class="screen-reader-text" and text()="{color_id}"]/ancestor::button'))
+                )
+                color_button.click()
 
             # Ürün sayfasındaki beden numarasını seçmeye çalış
             beden_element = wait.until(EC.element_to_be_clickable((By.ID, 'product-size-selector-{0}-item-{1}'.format(product_id, item_id))))
