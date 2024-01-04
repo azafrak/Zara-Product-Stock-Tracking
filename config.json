@@ -18,13 +18,13 @@
   "products": [
     {
       "url": "https://www.zara.com/tr/tr/yun-karisimli-ceket-p08491114.html?v1=322874816&v2=2290637",
-      "color_id": "Pembe"
+      "color_id": "Pembe",
       "product_id": "322874816",
       "item_id": "1"
     },
     {
       "url": "https://www.zara.com/tr/tr/z1975-straight-high-waist-cropped-boncuklu-jean-p06147195.html",
-      "color_id": ""
+      "color_id": "",
       "product_id": "298629453",
       "item_id": "0"
     }
